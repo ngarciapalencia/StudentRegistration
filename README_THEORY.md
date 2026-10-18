@@ -13,15 +13,3 @@ For a hypothetical example, a student list screen could observe a Room query ret
 An explicit Intent can open another Activity and carry extras, such as a student ID. The destination reads the ID and loads the corresponding record. This approach is useful when screens are separate Activities and integrates with Android's component model. Both sides must agree on the extra's key and type, and the receiving Activity should handle missing or invalid data. [2]
 
 Navigation Compose can pass an argument to a destination within a single-Activity application. For example, a student details route could carry the student ID. Its advantages include a navigation graph, coordinated back-stack handling and direct integration with composable destinations. Passing only an identifier keeps navigation data small and allows the destination to load current details from the database. The present implementation uses Navigation Compose for its screens but takes the search ID from a text field instead of a route argument. [3]
-
-## References and AI assistance
-
-Classroom references: ContactMVVM.zip, Android Database.pptx and Room databases.pptx supplied with the task. The example supplied the initial project configuration and the model of a Compose form connected to a ViewModel.
-
-1. Android Developers, LiveData overview: https://developer.android.com/topic/libraries/architecture/livedata
-2. Android Developers, Intents and intent filters: https://developer.android.com/guide/components/intents-filters
-3. Android Developers, Navigation: https://developer.android.com/guide/navigation
-4. Android Developers, Room: https://developer.android.com/training/data-storage/room
-5. Android Developers, Room release notes: https://developer.android.com/jetpack/androidx/releases/room
-
-AI was used to develop a project execution plan by creating a planning document that breaks down the tasks into individual steps. This allowed us to spread the work over several days, make the assignment more manageable, and ensure that none of the requirements were overlooked.

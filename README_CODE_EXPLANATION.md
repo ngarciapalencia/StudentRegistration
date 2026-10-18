@@ -75,3 +75,13 @@ AI was used to develop a project execution plan by creating a planning document 
 The reviewed RegisterScreen file currently contains two name fields connected to the same value. One of those fields should be removed. This document describes their shared purpose and does not treat them as separate student details.
 
 The current application has not been rebuilt or run as part of this documentation update. The earlier successful build and validation test results apply to the earlier version, before the screens were separated and the database initialisation was changed. The updated version still needs to be checked, including registration, search and persistence on an Android device or emulator.
+
+## References and AI assistance
+
+Classroom references: ContactMVVM.zip, Android Database.pptx and Room databases.pptx supplied with the task. The example supplied the initial project configuration and the model of a Compose form connected to a ViewModel.
+
+1. Android Developers, LiveData overview: https://developer.android.com/topic/libraries/architecture/livedata
+2. Android Developers, Intents and intent filters: https://developer.android.com/guide/components/intents-filters
+3. Android Developers, Navigation: https://developer.android.com/guide/navigation
+4. Android Developers, Room: https://developer.android.com/training/data-storage/room
+5. Android Developers, Room release notes: https://developer.android.com/jetpack/androidx/releases/room
