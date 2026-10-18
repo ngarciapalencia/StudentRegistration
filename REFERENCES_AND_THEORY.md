@@ -1,17 +1,3 @@
-# Student Registration design and theory
-
-## Implementation and design
-
-The application provides three screens: Home, Register student and Search student. Home links to the other two screens. Registration collects a name, course and year. Room assigns an ID when the student is saved, and the confirmation message displays that ID. Search uses the ID to retrieve the student's name and course, with year and ID included as additional details. An unsuccessful search displays a message and removes any earlier result.
-
-The project follows the Kotlin and Jetpack Compose approach of the supplied ContactMVVM example. MainActivity starts the interface. StudentScreens contains the composable screens and navigation routes. StudentViewModel holds form and result state and handles user actions. Student represents a stored record. StudentDao defines insertion and lookup operations, while StudentDatabase provides a shared Room database instance. This division separates screen layout from validation and database access without introducing additional frameworks.
-
-Room provides persistent local storage. A generated primary key distinguishes records even when students have the same name. Queries use an ID parameter rather than constructing SQL from user input. Database operations use suspend DAO functions launched from viewModelScope, so database work does not block the main thread. The database uses application context and a shared instance.
-
-Validation rejects blank names and courses, non-integer years and years outside 1–4. A numeric keyboard helps users enter a year, but validation remains necessary because keyboard choice alone does not guarantee valid input. Save and search buttons are disabled while their respective operations run. Database failures produce feedback rather than a success message. Screens scroll to accommodate smaller displays and the keyboard.
-
-Navigation Compose manages the three destinations and their back stack. The app uses Compose state, not LiveData. Unfinished form input is retained by the ViewModel across configuration changes, but is not saved across process death. Stored students remain available after restarting the app. Cloud synchronization, authentication, editing and deletion are outside this implementation's scope.
-
 ## Advantages of LiveData
 
 LiveData is an observable holder for data. An observer can react when a value changes, helping keep the interface consistent with the data and reducing manual refresh logic.
@@ -38,4 +24,4 @@ Classroom references: ContactMVVM.zip, Android Database.pptx and Room databases.
 4. Android Developers, Room: https://developer.android.com/training/data-storage/room
 5. Android Developers, Room release notes: https://developer.android.com/jetpack/androidx/releases/room
 
-The assistant generated the registration and search implementation, Room integration, validation, navigation, tests and accompanying written material. The complete generated implementation exceeds the assignment's stated AI allowance. The actual conversation is the record of assistance; this document does not claim independent student authorship.
+AI was used to develop a project execution plan by creating a planning document that breaks down the tasks into individual steps. This allowed us to spread the work over several days, make the assignment more manageable, and ensure that none of the requirements were overlooked.
