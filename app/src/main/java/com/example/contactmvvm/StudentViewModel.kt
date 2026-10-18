@@ -1,19 +1,17 @@
 package com.example.contactmvvm
 
-import android.app.Application
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 
-class StudentViewModel(application: Application) :
-    AndroidViewModel(application) {
+class StudentViewModel : ViewModel() {
 
     private val dao =
-        StudentDatabase.getInstance(application).studentDao()
+        MainApplication.studentDatabase.studentDao()
 
     var name by mutableStateOf("")
     var course by mutableStateOf("")

@@ -25,6 +25,14 @@ fun RegisterScreen(vm: StudentViewModel, back: () -> Unit) {
             label = { Text("Year (1-4)") }, singleLine = true, enabled = !vm.saving,
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             modifier = Modifier.fillMaxWidth())
+        OutlinedTextField(
+            value = vm.name,
+            onValueChange = { vm.name = it },
+            label = { Text("Name") },
+            singleLine = true,
+            enabled = !vm.saving,
+            modifier = Modifier.fillMaxWidth()
+        )
         Button(onClick = { vm.register() }, enabled = !vm.saving, modifier = Modifier.fillMaxWidth()) {
             Text(if (vm.saving) "Saving..." else "Save student")
         }
