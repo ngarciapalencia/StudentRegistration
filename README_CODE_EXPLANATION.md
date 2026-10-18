@@ -76,7 +76,7 @@ The reviewed RegisterScreen file currently contains two name fields connected to
 
 The current application has not been rebuilt or run as part of this documentation update. The earlier successful build and validation test results apply to the earlier version, before the screens were separated and the database initialisation was changed. The updated version still needs to be checked, including registration, search and persistence on an Android device or emulator.
 
-## References and AI assistance
+## References
 
 Classroom references: ContactMVVM.zip, Android Database.pptx and Room databases.pptx supplied with the task. The example supplied the initial project configuration and the model of a Compose form connected to a ViewModel.
 
